@@ -26,7 +26,7 @@ LEFT = 'left'
 RIGHT = 'right'
 
 HEAD = 0
-FPS = 2
+FPS = 5
 
 class Cell:
     def __init__(self, x, y):
