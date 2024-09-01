@@ -7,6 +7,12 @@ pygame.display.set_caption("Test project")
 image = pygame.image.load("cute-cats.png")
 image_rect = image.get_rect()
 
+image2 = pygame.image.load("sausage.png")
+new_size = (50, 50)
+image2 = pygame.image.load("sausage.png")
+image_rect2 = image2.get_rect()
+
+
 run = True
 
 while run:
@@ -18,10 +24,12 @@ while run:
             image_rect.x = mouseX - 40
             image_rect.y = mouseY - 40
 
-
+    if image_rect.colliderect(image_rect2):
+        print("Booommm")
 
     screen.fill((0, 0, 0))
     screen.blit(image, image_rect)
+    screen.blit(image2, image_rect2)
     pygame.display.flip()
 
 pygame.quit()
